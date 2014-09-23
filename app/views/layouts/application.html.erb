@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, id: "#{key}", class: "flash" %>
+    <% end %>
 
-<%= yield %>
+    <% if current_user %>
+    <div class='right'>
+      Logged In as <%= current_user.email %>
+      <%= link_to "Log out", logout_path %>
+    </div>
+    <% else %>
+      <%= link_to "Sign Up", signup_path %> or
+      <%= link_to "Log In", login_path %>
+    <% end %>
+  </header>
+
+  <%= yield %>
 
 </body>
 </html>
