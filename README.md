@@ -6,7 +6,7 @@ Followed the directions provided in Railscast #250 but in **Rails 4.1.6**.
 
 The basic functionality includes:
 
-- A basic framwork of **Posts** with title and body (scaffolded!)
+- A basic framwork of **Posts** with title and body (scaffolded!) seeded with Fake gem.
 - A **User** table with basic CRUD functionality, with email and password
 - A **Session** table that keeps track of users logged in
 
