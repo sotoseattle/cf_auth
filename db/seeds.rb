@@ -8,6 +8,6 @@
 
 5.times do
   Post.create([{
-    title: Faker::Lorem.sentence(3),
-    body: Faker::Lorem.sentence(6, true)}])
+                title: Faker::Lorem.sentence(3),
+                body: Faker::Lorem.sentence(6, true) }])
 end
